@@ -20,7 +20,7 @@ class SignupPage extends StatelessWidget {
           Container(
             width: screenSize.width,
             height: screenSize.height,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(screenSize.width / 18),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -36,13 +36,13 @@ class SignupPage extends StatelessWidget {
           ),
           Container(
             width: screenSize.width,
-            margin: EdgeInsets.only(top: 150),
-            padding: EdgeInsets.all(30),
+            margin: EdgeInsets.only(top: screenSize.height / 4.9),
+            padding: EdgeInsets.all(screenSize.width / 12),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
+                topLeft: Radius.circular(screenSize.width / 9),
+                topRight: Radius.circular(screenSize.width / 9),
               ),
               border: Border.all(color: Colors.white),
             ),
@@ -50,13 +50,13 @@ class SignupPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  padding: EdgeInsets.only(top: screenSize.width / 24.6),
                   child: TextField(
                     decoration: InputDecoration(
                       label: Text(
                         "Full Name",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: screenSize.width / 20,
                           color: const Color.fromARGB(255, 255, 7, 90),
                         ),
                       ),
@@ -64,13 +64,13 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: screenSize.height / 37),
                   child: TextField(
                     decoration: InputDecoration(
                       label: Text(
                         "Phone or Gmail",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: screenSize.width / 20,
                           color: const Color.fromARGB(255, 255, 7, 90),
                         ),
                       ),
@@ -78,7 +78,7 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: screenSize.height / 37),
                   child: Obx(
                     () => TextField(
                       decoration: InputDecoration(
@@ -91,13 +91,13 @@ class SignupPage extends StatelessWidget {
                             !controller.showPasswd.value
                                 ? CupertinoIcons.eye
                                 : CupertinoIcons.eye_slash,
-                            size: 25,
+                            size: screenSize.width / 14.4,
                           ),
                         ),
                         label: Text(
                           "Password",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: screenSize.width / 20,
                             color: const Color.fromARGB(255, 255, 7, 90),
                           ),
                         ),
@@ -107,7 +107,7 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: screenSize.height / 37),
                   child: Obx(
                     () => TextField(
                       decoration: InputDecoration(
@@ -120,13 +120,13 @@ class SignupPage extends StatelessWidget {
                             !controller.showPasswd.value
                                 ? CupertinoIcons.eye
                                 : CupertinoIcons.eye_slash,
-                            size: 25,
+                            size: screenSize.width / 14.4,
                           ),
                         ),
                         label: Text(
                           "Confirm Password",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: screenSize.width / 20,
                             color: const Color.fromARGB(255, 255, 7, 90),
                           ),
                         ),
@@ -142,9 +142,11 @@ class SignupPage extends StatelessWidget {
                     Expanded(
                       child: InkWell(
                         child: Container(
-                          padding: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(screenSize.width / 36),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(
+                              screenSize.width / 18,
+                            ),
                             gradient: LinearGradient(
                               colors: [
                                 const Color.fromARGB(255, 206, 1, 35),
@@ -157,7 +159,7 @@ class SignupPage extends StatelessWidget {
                               "Sign Up",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18,
+                                fontSize: screenSize.width / 20,
                               ),
                             ),
                           ),
@@ -175,7 +177,7 @@ class SignupPage extends StatelessWidget {
                       Text(
                         "You have account?",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: screenSize.width / 22.5,
                           color: const Color.fromARGB(255, 78, 77, 77),
                         ),
                       ),
@@ -184,7 +186,7 @@ class SignupPage extends StatelessWidget {
                         child: Text(
                           "Sign In",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: screenSize.width / 20,
                             fontWeight: FontWeight.bold,
                             color: const Color.fromARGB(255, 71, 1, 19),
                           ),

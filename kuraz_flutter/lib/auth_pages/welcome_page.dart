@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 import 'package:kuraz_flutter/auth_pages/signin_page.dart';
 import 'package:kuraz_flutter/auth_pages/signup_page.dart';
@@ -64,7 +63,7 @@ class WelcomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      onPressed: () => Get.to(() => SignupPage()),
+                      onPressed: () => Get.to(() => SigninPage()),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
                           vertical: screenSize.height / 74,

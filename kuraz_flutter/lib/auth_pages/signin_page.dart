@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/route_manager.dart';
@@ -21,7 +20,7 @@ class SigninPage extends StatelessWidget {
           Container(
             width: screenSize.width,
             height: screenSize.height,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(screenSize.width / 18),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -32,18 +31,21 @@ class SigninPage extends StatelessWidget {
             ),
             child: Text(
               "Hello \nSign in!",
-              style: TextStyle(color: Colors.white, fontSize: 30),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: screenSize.width / 12,
+              ),
             ),
           ),
           Container(
             width: screenSize.width,
-            margin: EdgeInsets.only(top: 150),
-            padding: EdgeInsets.all(30),
+            margin: EdgeInsets.only(top: screenSize.height / 4.9),
+            padding: EdgeInsets.all(screenSize.width / 12),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-                topRight: Radius.circular(40),
+                topLeft: Radius.circular(screenSize.width / 9),
+                topRight: Radius.circular(screenSize.width / 9),
               ),
               border: Border.all(color: Colors.white),
             ),
@@ -51,13 +53,13 @@ class SigninPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 30.0),
+                  padding: EdgeInsets.only(top: screenSize.height / 24.6),
                   child: TextField(
                     decoration: InputDecoration(
                       label: Text(
                         "Gmail",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: screenSize.width / 20,
                           color: const Color.fromARGB(255, 255, 7, 90),
                         ),
                       ),
@@ -65,7 +67,7 @@ class SigninPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: EdgeInsets.only(top: screenSize.width / 37),
                   child: Obx(
                     () => TextField(
                       decoration: InputDecoration(
@@ -84,7 +86,7 @@ class SigninPage extends StatelessWidget {
                         label: Text(
                           "Password",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: screenSize.width / 20,
                             color: const Color.fromARGB(255, 255, 7, 90),
                           ),
                         ),
@@ -94,7 +96,7 @@ class SigninPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(top: screenSize.height / 74),
                   child: Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
@@ -102,7 +104,7 @@ class SigninPage extends StatelessWidget {
                       child: Text(
                         "Forget password?",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: screenSize.width / 22.5,
                           color: const Color.fromARGB(255, 54, 1, 19),
                         ),
                       ),
@@ -115,9 +117,11 @@ class SigninPage extends StatelessWidget {
                     Expanded(
                       child: InkWell(
                         child: Container(
-                          padding: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(screenSize.width / 36),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(
+                              screenSize.width / 18,
+                            ),
                             gradient: LinearGradient(
                               colors: [
                                 const Color.fromARGB(255, 206, 1, 35),
@@ -130,7 +134,7 @@ class SigninPage extends StatelessWidget {
                               "Sign in",
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 18,
+                                fontSize: screenSize.width / 20,
                               ),
                             ),
                           ),
@@ -149,7 +153,7 @@ class SigninPage extends StatelessWidget {
                       Text(
                         "Don't have account?",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: screenSize.width / 22.5,
                           color: const Color.fromARGB(255, 78, 77, 77),
                         ),
                       ),
@@ -158,7 +162,7 @@ class SigninPage extends StatelessWidget {
                         child: Text(
                           "Sign Up",
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: screenSize.width / 20,
                             fontWeight: FontWeight.bold,
                             color: const Color.fromARGB(255, 71, 1, 19),
                           ),
